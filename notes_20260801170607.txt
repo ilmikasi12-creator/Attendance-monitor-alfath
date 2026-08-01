@@ -1,0 +1,435 @@
+08.01 16.59
+Develop a modern Flutter application for an Islamic Boarding School Attendance Monitoring System with a clean Material Design 3 interface, elegant Dark Mode, responsive layout, and 100% Indonesian language throughout the application. The system should use a scalable database architecture (Firebase Firestore or Supabase) suitable for future production deployment.
+User Roles
+1. Coordinator
+The Coordinator has access to monitor all attendance reports across every department.
+Features
+Overall dashboard
+Daily statistics
+Weekly statistics
+Monthly statistics
+Yearly statistics
+Attendance monitoring for all departments
+Priority student monitoring
+Attendance trend analytics
+Export reports to PDF and Excel
+Search students
+Filter by date, class, dormitory, and department
+2. Tarbiyah Department
+Responsible for managing:
+Student disciplinary records
+Student case handling status
+Not Handled
+Under Investigation
+Resolved
+Qoilulah Attendance
+Night Sleep Attendance
+Dormitory Attendance
+Thursday Hadiri Attendance
+Tarbiyah Dashboard
+Display:
+Total problematic students
+Students already handled
+Students not yet handled
+Daily statistics
+Weekly statistics
+Monthly statistics
+Yearly statistics
+3. Diniyyah Department
+Responsible for:
+Morning Diniyyah
+Mutola'ah
+Hafalan Kitab
+Diniyyah Dashboard
+Display:
+Today's absences
+Attendance trend chart
+Daily statistics
+Weekly statistics
+Monthly statistics
+Yearly statistics
+4. Tahfiz Department
+Responsible for:
+Tahfiz Fajr
+Tahfiz Daytime
+Manzil
+Tahfiz Dashboard
+Display:
+Today's absences
+Attendance trend chart
+Daily statistics
+Weekly statistics
+Monthly statistics
+Yearly statistics
+Department Structure
+Tarbiyah
+Qoilulah
+Night Sleep
+Dormitory
+Thursday Hadiri
+Student Discipline Records
+Diniyyah
+Morning Diniyyah
+Mutola'ah
+Hafalan Kitab
+Tahfiz
+Tahfiz Fajr
+Tahfiz Daytime
+Manzil
+Coordinator Dashboard
+Display:
+Today's Absences
+Yesterday's Absences
+This Week's Absences
+This Month's Absences
+This Year's Absences
+Total Priority Students
+Total Problematic Students
+Total Submitted Reports
+Departments Pending Submission
+Attendance Trend Chart
+Department Comparison Chart
+Top 10 Students with Highest Absences
+Top 10 Departments with Highest Absences
+Department Performance Statistics
+Main Navigation
+Dashboard
+Attendance
+Priority Students
+Reports
+Profile
+Attendance Page
+Display every department along with its submission status.
+Status:
+Submitted
+Pending
+Show progress such as:
+6 of 10 departments have submitted today's report
+Each department should display:
+Submit button
+Last submission time
+Staff member who submitted the report
+Priority Students Page
+Display students with the highest absence records.
+Each student card should include:
+Name
+Class
+Dormitory
+Total Absences
+Frequently missed departments
+Last absence date
+Handling status
+Not Called
+Called
+Under Guidance
+Resolved
+Provide filters for:
+Student name
+Class
+Dormitory
+Department
+Date
+Include real-time search functionality.
+Reports Page
+Tabs:
+Daily
+Weekly
+Monthly
+Yearly
+Each report should display:
+Total Absences
+Sick Leave
+Permission Leave
+Attendance Percentage
+Charts
+Department Summary
+Features:
+Export to PDF
+Export to Excel
+Print Report
+Profile Page
+Display:
+User Name
+Position
+Email
+Profile Picture
+Change Password
+About Application
+Application Version
+Logout
+Notifications
+Push notifications should be sent when:
+A department has not submitted its report
+A new priority student is detected
+A new disciplinary case is recorded
+Submission deadline reminders
+Statistics
+Every dashboard should include:
+Daily Statistics
+Weekly Statistics
+Monthly Statistics
+Yearly Statistics
+Visualization:
+Bar Chart
+Line Chart
+Pie Chart
+Database Design
+Create a scalable database structure using Firebase Firestore or Supabase.
+Collections/Tables:
+Users
+Students
+Classes
+Dormitories
+Departments
+Attendance
+Priority Students
+Student Discipline Cases
+Case Handling
+Statistics
+Activity Logs
+Notifications
+The database must be normalized, efficient, and easily expandable for future production use.
+UI/UX Requirements
+Use Material Design 3 with a professional and modern appearance.
+Theme:
+Elegant Dark Mode
+Primary Color: Blue
+Red for Absence indicators
+Green for Success
+Yellow for Warnings
+Include:
+Skeleton Loading
+Empty States
+Error States
+Pull-to-Refresh
+Smooth Animations
+Modern Cards
+Interactive Charts
+Responsive layouts for Android phones and tablets
+Goal
+Build a professional, scalable, production-ready attendance monitoring application specifically designed for Islamic boarding schools (Pondok Pesantren). The application must provide comprehensive attendance management, disciplinary tracking, analytics, and reporting while using 100% Indonesian language throughout the user interface. It should be optimized for long-term development, maintainability, and seamless integration with a production database.OnSpace AI Prompt: Pondok Attendance Monitoring System
+
+Build a complete Android application called Pondok Attendance Monitoring System for an Islamic boarding school (pesantren). This application is specifically designed for the Attendance Team Meeting (Musyawarah Tim Absen) process and daily student attendance monitoring.
+
+The application must feel like a professional monitoring dashboard, similar to a control center or analytics system, not a typical school attendance app.
+
+Main Objective
+
+The system collects attendance reports from multiple departments (Instansi), automatically calculates Alpha (unexcused absence) statistics, identifies repeated absences, and provides dashboards and reports for daily, weekly, and monthly evaluation meetings.
+
+User Roles
+
+1. Department Officer (Instansi Officer)
+
+Departments:
+
+- Diniyyah
+- Tahfidz
+- Qoilulah
+- Ngasor
+- Manzil
+- Mutola'ah
+- Hafalan Kitab
+- Night Attendance
+- Complex
+
+Permissions:
+
+- Login using their own account.
+- Submit attendance reports only for their assigned department.
+- View only their department's data and history.
+- View department-specific graphs and statistics.
+- Cannot access or edit any other department.
+
+2. Attendance Coordinator
+
+Permissions:
+
+- View all departments.
+- View total Alpha cases across the entire boarding school.
+- View real-time dashboards.
+- View daily, weekly, and monthly trends.
+- Compare departments.
+- View students with repeated Alpha records.
+- Update follow-up status.
+
+3. Principal / Senior Ustadz
+
+Permissions:
+
+- Read-only access.
+- View dashboards, graphs, reports, and evaluations.
+- Cannot modify data.
+
+Database
+
+Students
+
+- Student ID
+- Full Name
+- Class
+- Complex
+- Status (Active / Inactive)
+
+Attendance Reports
+
+- Report ID
+- Date
+- Department
+- Student ID
+- Student Name
+- Attendance Status (Present / Excused / Sick / Alpha)
+
+Users
+
+- Name
+- Email
+- Password
+- Role
+- Assigned Department
+
+Core Features
+
+Daily Attendance Input
+
+Department officers should be able to:
+
+- Select the date.
+- Select their department automatically.
+- Search students.
+- Mark Alpha students.
+- Save the report.
+
+Automatic Calculations
+
+The system must automatically calculate:
+
+- Total Alpha today.
+- Total Alpha yesterday.
+- Difference from yesterday.
+- Total Alpha this week.
+- Total Alpha this month.
+
+Automatic Student Detection
+
+Track every student's Alpha history.
+
+If a student reaches 3 Alpha records, automatically place them into Priority Students.
+
+If a student is absent in multiple departments on the same day, flag them as Cross-Department Alpha.
+
+Dashboard
+
+Create a modern dark-themed dashboard with:
+
+Top Summary Cards
+
+- Total Alpha Today
+- Total Alpha Yesterday
+- Weekly Total
+- Monthly Total
+- Number of Priority Students
+
+Line Chart
+
+Display a 30-day Alpha trend showing whether Alpha cases are increasing or decreasing.
+
+Department Comparison
+
+Display a horizontal bar chart comparing Alpha counts for all departments.
+
+Priority Students
+
+Show students with:
+
+- Alpha Count
+- Last Alpha Date
+- Department
+- Follow-up Status
+
+Follow-Up Management
+
+Each priority student must have a status:
+
+- Not Called
+- Called
+- Under Ta'zir
+- Resolved
+
+The coordinator can update these statuses.
+
+Reports
+
+Generate:
+
+- Daily report
+- Weekly report
+- Monthly report
+- Department report
+- Student attendance history
+
+Allow exporting reports to Excel and PDF.
+
+Notifications
+
+- Notify the coordinator when a department has not submitted its report.
+- Notify when a student reaches 3 Alpha records.
+- Notify when today's Alpha exceeds the 7-day average.
+
+UI / UX
+
+Use a dark professional interface with:
+
+- Black / dark gray background
+- Blue accents
+- Green for improvements
+- Red for warnings
+- Large readable numbers
+- Smooth charts and clean spacing
+
+Home Screen
+
+After login, display:
+
+- Submit Today's Report
+- Dashboard
+- Priority Students
+- Department Statistics
+- Report History
+- Weekly Evaluation
+- Monthly Evaluation
+
+Additional Requirements
+
+- Real-time synchronization.
+- Offline support with automatic sync when internet is available.
+- Searchable student database.
+- Fast loading even with 2,000+ students.
+- Mobile-first Android design.
+- Generate a complete working Android application that can be exported as an APK directly from OnSpace AI.Update the application to use strict role-based access control.
+
+Create a separate role for each department:
+
+- Diniyyah Officer
+- Tahfidz Officer
+- Qoilulah Officer
+- Ngasor Officer
+- Manzil Officer
+- Mutola'ah Officer
+- Hafalan Kitab Officer
+- Night Attendance Officer
+- Complex Officer
+
+Each department officer must only be able to:
+
+- View students from their own department
+- Submit attendance reports for their own department
+- View attendance history for their own department
+- View statistics and charts for their own department
+- They must NOT be able to see, edit, or access any other department.
+
+The Coordinator role must be able to view and manage all departments.
+
+The Principal role must have read-only access to all departments.
+
+After login, each user should automatically be redirected to the correct dashboard based on their department role.
